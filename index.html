@@ -18,13 +18,13 @@
             <nav>
                 <ul class="nav">
                     <li class="nav__item">
-                        <a href="#">About me</a>
+                        <a href="#" class="active">Home</a>
                     </li>
                     <li class="nav__item">
-                        <a href="#">Skills</a>
+                        <a href="#about-me">About me</a>
                     </li>
                     <li class="nav__item">
-                        <a href="#">Portfolio</a>
+                        <a href="#skills">Skills</a>
                     </li>
                     <li class="nav__item">
                         <a href="#">Contact me</a>
@@ -32,9 +32,19 @@
                 </ul>
             </nav>
         </div>
+        <section>
+            <img src="./img/parallax/1/moon.png" alt="moon" id="moon">
+            <img src="./img/parallax/1/stars.png" alt="stars" id="stars">
+            <img src="./img/parallax/front.png" alt="Front mountain" id="frontMountain">
+            <img src="./img/parallax/midMoundain.png" alt="Mid mountain" id="midMountain">
+            <h2 id="AbdurasulDjurayev"> Abdurasul Djurayev</h2>
+            <a href="#about-me" id="explore">Explore</a>
+            <img src="./img/parallax/backMountain.png" alt="back mountain" id="backMountain">
+        </section>
+        <script src="./js/parallax.js"></script>
     </header>
     <section>
-        <div class="about-me">
+        <div class="about-me" id="about-me">
             <div class="sections-header">
                 <h2> About me</h2>
             </div>
@@ -66,9 +76,9 @@
             <img src="./img/separatorBlack1.png" alt="seperator" class="seperator">
 
         </div>
-    </section>
+    </section> 
     <section>
-        <div class="skills">
+        <div class="skills" id="skills">
             <div class="sections-header">
                 <h2> Skills</h2>
             </div>
@@ -139,7 +149,7 @@
 
                 <!-- Script -->
                 <!-- <script src="./js/circleBar.js"></script> -->
-            </div>
+          </div>
         </div>
     </section>
 </body>

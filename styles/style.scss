@@ -1,21 +1,11 @@
 @import 'variables'; 
 
-// Fonts
-// @font-face {
-//     font-family: GilroyLight;
-//     src: url("../fonts/Gilroy-FREE/Gilroy-Light.otf") format("opentype");
-// }
-
-// @font-face {
-//     font-family: GilroyBold;
-//     font-weight: bold;
-//     src: url("../fonts/Gilroy-FREE/Gilroy-ExtraBold.otf") format("opentype");
-// }
-
-// @font-face {
-//     font-family: Gilroy;
-//     src: url("../fonts/Gilroy-Regular.woff2") format("woff2");
-// }
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    scroll-behavior: smooth;
+}
 
 html {
     font-size: 10px;
@@ -25,11 +15,7 @@ body {
     font-size: 16px;
     font-family: $fontFamily1;
     color: $white;
-}
-
-h1,h2,h3,h4,h5,h6,p,html,body{
-    margin: 0;
-    padding: 0;
+    overflow-x: hidden;
 }
 
 a {
@@ -38,8 +24,6 @@ a {
 
 ul {
     list-style-type: none;
-    margin: 0;
-    padding: 0;
 }
 
 %flex-space-between {
@@ -49,47 +33,129 @@ ul {
     align-items: center;
 }
 
-.header {
-    padding: 3rem 18rem ;
-    background-color: transparent;
-    @extend %flex-space-between;
-    img {
-        
-        width: 55px;
-        height: 65px;
-    }
-}
-
-.nav {
-    margin-right: 1rem;
-    width: 48rem;
-    @extend %flex-space-between;
-    justify-content: space-around;
-    font-family: $fontFamily2;
-    a {
-        color: $white;
-        font-size: 1.3rem;
-        font-weight: 500;
-    }
-}
-
 header {
-    width: 100%;
-    height: 100vh;
-    background-image: url("../img/welcome/back2.jpg");
-    background-repeat: no-repeat;
-    background-size: cover;
-    background-attachment: fixed;
+    background: linear-gradient($gradient1, $gradient2);
+    min-height: 100vh;
+
+    .header {
+        position: absolute;
+        width: 100%;
+        background-repeat: no-repeat;
+        background-size: cover;
+        background-attachment: fixed;
+        padding: 3rem 10rem ;
+        background: transparent;
+        @extend %flex-space-between;
+        z-index: 1000;
+        img {
+            width: 55px;
+            height: 65px;
+        }
+
+        .nav {
+            width: 100%;
+            @extend %flex-space-between;
+            justify-content: center;
+            font-family: $fontFamily2;
+            li {
+                margin-left: 2rem;
+            }
+            a {
+                padding: 1rem 1.5rem;
+                color: $white;
+                font-size: 1.3rem;
+                font-weight: 700;
+                border-radius: 20px;
+            }
+        
+            a:hover, a.active {
+                background: $pureWhite;
+                color: $gradient1;
+            }
+        }
+    }
+
+    section {
+        overflow: hidden ;
+        position: relative;
+        width: 100%;
+        height: 100vh;
+        // padding: 10rem;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        img {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            pointer-events: none;
+
+            &#moon {
+                mix-blend-mode: screen;
+            }
+            &#backMountain {
+                z-index: 1;
+            }
+
+            &#midMountain {
+                z-index: 6;
+            }
+
+            &#frontMountain {
+                z-index: 8;
+            }
+        }
+
+        #AbdurasulDjurayev {
+            position: absolute;
+            left: -70rem;
+            z-index: 5;
+            color: $pureWhite;
+            white-space: nowrap;
+            font-size: 7.5rem;
+            text-shadow: 2px 2px 10px $gradient1, -2px -2px 10px $gradient1;
+        }
+
+        #explore {
+            text-decoration: none;
+            display: inline-block;
+            padding: 0.8rem 3rem;
+            border-radius: 40px;
+            background: $pureWhite;
+            color: $gradient1;
+            font-size: 1.5rem;
+            font-weight: 500;
+            z-index: 7;
+            transform: translateY(10rem);
+            box-shadow: 2px 2px 10px $gradient1, -2px -2px 10px $pureWhite;
+        }
+    }
 }
+
+header::before {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+    height: 10rem;
+    background: linear-gradient(to top, $background, transparent);
+    z-index: 1000;
+}
+
 
 .about-me, .skills {
     @extend %flex-space-between;
     justify-content: center;
     flex-direction: column;
+    position: relative;
     background: $background;
     padding: 10rem 20rem 0 20rem;
     text-align: center;
     color: $white;
+    // z-index: 10;
 }
 
 .skills {

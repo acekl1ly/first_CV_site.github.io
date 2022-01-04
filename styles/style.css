@@ -1,3 +1,11 @@
+* {
+  margin: 0;
+  padding: 0;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  scroll-behavior: smooth;
+}
+
 html {
   font-size: 10px;
 }
@@ -6,11 +14,7 @@ body {
   font-size: 16px;
   font-family: "Open Sans", sans-serif;
   color: #E5E5E5;
-}
-
-h1, h2, h3, h4, h5, h6, p, html, body {
-  margin: 0;
-  padding: 0;
+  overflow-x: hidden;
 }
 
 a {
@@ -19,11 +23,9 @@ a {
 
 ul {
   list-style-type: none;
-  margin: 0;
-  padding: 0;
 }
 
-.header, .nav, .about-me, .skills, .about-me__passions, .circle-bars-container {
+header .header, header .header .nav, .about-me, .skills, .about-me__passions, .circle-bars-container {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -39,37 +41,131 @@ ul {
           align-items: center;
 }
 
-.header {
-  padding: 3rem 18rem;
-  background-color: transparent;
+header {
+  background: -webkit-gradient(linear, left top, left bottom, from(#2b1055), to(#7597de));
+  background: linear-gradient(#2b1055, #7597de);
+  min-height: 100vh;
 }
 
-.header img {
+header .header {
+  position: absolute;
+  width: 100%;
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-attachment: fixed;
+  padding: 3rem 10rem;
+  background: transparent;
+  z-index: 1000;
+}
+
+header .header img {
   width: 55px;
   height: 65px;
 }
 
-.nav {
-  margin-right: 1rem;
-  width: 48rem;
-  -ms-flex-pack: distribute;
-      justify-content: space-around;
+header .header .nav {
+  width: 100%;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
   font-family: "Montserrat", sans-serif;
 }
 
-.nav a {
-  color: #E5E5E5;
-  font-size: 1.3rem;
-  font-weight: 500;
+header .header .nav li {
+  margin-left: 2rem;
 }
 
-header {
+header .header .nav a {
+  padding: 1rem 1.5rem;
+  color: #E5E5E5;
+  font-size: 1.3rem;
+  font-weight: 700;
+  border-radius: 20px;
+}
+
+header .header .nav a:hover, header .header .nav a.active {
+  background: #ffffff;
+  color: #2b1055;
+}
+
+header section {
+  overflow: hidden;
+  position: relative;
   width: 100%;
   height: 100vh;
-  background-image: url("../img/welcome/back2.jpg");
-  background-repeat: no-repeat;
-  background-size: cover;
-  background-attachment: fixed;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+header section img {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  -o-object-fit: cover;
+     object-fit: cover;
+  pointer-events: none;
+}
+
+header section img#moon {
+  mix-blend-mode: screen;
+}
+
+header section img#backMountain {
+  z-index: 1;
+}
+
+header section img#midMountain {
+  z-index: 6;
+}
+
+header section img#frontMountain {
+  z-index: 8;
+}
+
+header section #AbdurasulDjurayev {
+  position: absolute;
+  left: -70rem;
+  z-index: 5;
+  color: #ffffff;
+  white-space: nowrap;
+  font-size: 7.5rem;
+  text-shadow: 2px 2px 10px #2b1055, -2px -2px 10px #2b1055;
+}
+
+header section #explore {
+  text-decoration: none;
+  display: inline-block;
+  padding: 0.8rem 3rem;
+  border-radius: 40px;
+  background: #ffffff;
+  color: #2b1055;
+  font-size: 1.5rem;
+  font-weight: 500;
+  z-index: 7;
+  -webkit-transform: translateY(10rem);
+          transform: translateY(10rem);
+  -webkit-box-shadow: 2px 2px 10px #2b1055, -2px -2px 10px #ffffff;
+          box-shadow: 2px 2px 10px #2b1055, -2px -2px 10px #ffffff;
+}
+
+header::before {
+  content: '';
+  position: absolute;
+  bottom: 0;
+  width: 100%;
+  height: 10rem;
+  background: -webkit-gradient(linear, left bottom, left top, from(#161240), to(transparent));
+  background: linear-gradient(to top, #161240, transparent);
+  z-index: 1000;
 }
 
 .about-me, .skills {
@@ -80,7 +176,8 @@ header {
   -webkit-box-direction: normal;
       -ms-flex-direction: column;
           flex-direction: column;
-  background: #2e2152;
+  position: relative;
+  background: #161240;
   padding: 10rem 20rem 0 20rem;
   text-align: center;
   color: #E5E5E5;
@@ -187,7 +284,7 @@ header {
   position: absolute;
   height: 84%;
   width: 84%;
-  background-color: #2e2152;
+  background-color: #161240;
   border-radius: 50%;
   -webkit-transform: translate(-50, -50);
           transform: translate(-50, -50);

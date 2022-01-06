@@ -25,7 +25,7 @@ ul {
   list-style-type: none;
 }
 
-header .header, header .header .nav, .about-me, .skills, .about-me__passions, .circle-bars-container {
+header .header, header .header .nav, .back-to div a, .about-me, .skills, .contact-me, .footer, .about-me__passions, .circle-bars-container {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -165,10 +165,181 @@ header::before {
   height: 10rem;
   background: -webkit-gradient(linear, left bottom, left top, from(#161240), to(transparent));
   background: linear-gradient(to top, #161240, transparent);
-  z-index: 1000;
+  z-index: 99;
 }
 
-.about-me, .skills {
+.back-to {
+  position: fixed;
+  z-index: 100;
+  right: 0;
+  bottom: 0;
+}
+
+.back-to div {
+  margin: 3rem;
+  padding: 2rem 4rem;
+  -webkit-transition: all 0.5s ease-in-out;
+  transition: all 0.5s ease-in-out;
+}
+
+.back-to div a {
+  width: 100%;
+  height: auto;
+  font-size: 3rem;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-animation: rocketLaunched 0.5s  linear infinite;
+          animation: rocketLaunched 0.5s  linear infinite;
+}
+
+.back-to div a #fire {
+  color: #ff7b00;
+  margin-left: 0.2rem;
+  -webkit-animation: fire 3s  linear infinite;
+          animation: fire 3s  linear infinite;
+}
+
+.back-to div a #rocket {
+  -webkit-text-stroke: 1px white;
+  color: #2b1055;
+}
+
+.back-to div a .to-bottom {
+  -webkit-transform: rotate(90deg);
+          transform: rotate(90deg);
+}
+
+.back-to div a .to-top {
+  -webkit-transform: rotate(270deg);
+          transform: rotate(270deg);
+}
+
+@-webkit-keyframes rocketLaunched {
+  0% {
+    -webkit-transform: translate(0, 0);
+            transform: translate(0, 0);
+  }
+  20% {
+    -webkit-transform: translate(-2px, 0);
+            transform: translate(-2px, 0);
+  }
+  40% {
+    -webkit-transform: translate(0, -1px);
+            transform: translate(0, -1px);
+  }
+  60% {
+    -webkit-transform: translate(0, 0);
+            transform: translate(0, 0);
+  }
+  80% {
+    -webkit-transform: translate(2px, 0);
+            transform: translate(2px, 0);
+  }
+  100% {
+    -webkit-transform: translate(0, 1px);
+            transform: translate(0, 1px);
+  }
+}
+
+@keyframes rocketLaunched {
+  0% {
+    -webkit-transform: translate(0, 0);
+            transform: translate(0, 0);
+  }
+  20% {
+    -webkit-transform: translate(-2px, 0);
+            transform: translate(-2px, 0);
+  }
+  40% {
+    -webkit-transform: translate(0, -1px);
+            transform: translate(0, -1px);
+  }
+  60% {
+    -webkit-transform: translate(0, 0);
+            transform: translate(0, 0);
+  }
+  80% {
+    -webkit-transform: translate(2px, 0);
+            transform: translate(2px, 0);
+  }
+  100% {
+    -webkit-transform: translate(0, 1px);
+            transform: translate(0, 1px);
+  }
+}
+
+@-webkit-keyframes fire {
+  0% {
+    -webkit-transform: scaleY(1);
+            transform: scaleY(1);
+    font-size: 3rem;
+    color: #ff7b00;
+  }
+  25% {
+    -webkit-transform: scaleY(1.25);
+            transform: scaleY(1.25);
+    font-size: 2.5rem;
+    color: #ff6600;
+  }
+  50% {
+    -webkit-transform: scaleY(1.5);
+            transform: scaleY(1.5);
+    font-size: 3rem;
+    color: #ff5100;
+  }
+  75% {
+    -webkit-transform: scaleY(1.25);
+            transform: scaleY(1.25);
+    font-size: 2.5rem;
+    color: #ff6600;
+  }
+  100% {
+    -webkit-transform: scaleY(1);
+            transform: scaleY(1);
+    font-size: 3rem;
+    color: #ff7b00;
+  }
+}
+
+@keyframes fire {
+  0% {
+    -webkit-transform: scaleY(1);
+            transform: scaleY(1);
+    font-size: 3rem;
+    color: #ff7b00;
+  }
+  25% {
+    -webkit-transform: scaleY(1.25);
+            transform: scaleY(1.25);
+    font-size: 2.5rem;
+    color: #ff6600;
+  }
+  50% {
+    -webkit-transform: scaleY(1.5);
+            transform: scaleY(1.5);
+    font-size: 3rem;
+    color: #ff5100;
+  }
+  75% {
+    -webkit-transform: scaleY(1.25);
+            transform: scaleY(1.25);
+    font-size: 2.5rem;
+    color: #ff6600;
+  }
+  100% {
+    -webkit-transform: scaleY(1);
+            transform: scaleY(1);
+    font-size: 3rem;
+    color: #ff7b00;
+  }
+}
+
+.about-me, .skills, .contact-me, .footer {
   -webkit-box-pack: center;
       -ms-flex-pack: center;
           justify-content: center;
@@ -295,5 +466,127 @@ header::before {
   font-family: "Open Sans", sans-serif;
   font-size: 4rem;
   color: #E5E5E5;
+}
+
+.footer {
+  bottom: 0;
+  overflow-y: hidden;
+  width: 100%;
+}
+
+.footer p {
+  margin-bottom: 2.5rem;
+}
+
+.footer p i, .footer p span {
+  color: gold;
+  font-size: 2.2rem;
+}
+
+.footer p i {
+  -webkit-text-stroke: 1px #ffffff;
+  background: -webkit-gradient(linear, left top, right top, from(#ff0000), color-stop(#ffff00), color-stop(#ff00f3), color-stop(#0033ff), color-stop(#ff00c4), to(#ff0000));
+  background: linear-gradient(90deg, #ff0000, #ffff00, #ff00f3, #0033ff, #ff00c4, #ff0000);
+  -webkit-text-fill-color: transparent;
+  background-size: 400%;
+  background-clip: text;
+  -webkit-background-clip: text;
+  -webkit-animation: heartBeating 5s 1.2s linear infinite;
+          animation: heartBeating 5s 1.2s linear infinite;
+}
+
+.footer p span {
+  background: -webkit-gradient(linear, left top, right top, from(#ff0000), color-stop(#ffff00), color-stop(#ff00f3), color-stop(#0033ff), color-stop(#ff00c4), to(#ff0000));
+  background: linear-gradient(90deg, #ff0000, #ffff00, #ff00f3, #0033ff, #ff00c4, #ff0000);
+  -webkit-text-fill-color: transparent;
+  background-size: 400%;
+  background-clip: text;
+  -webkit-background-clip: text;
+  -webkit-animation: rainbow 5s linear infinite;
+          animation: rainbow 5s linear infinite;
+}
+
+@-webkit-keyframes heartBeating {
+  0% {
+    background-position: 400%;
+    -webkit-transform: scale(1, 1);
+            transform: scale(1, 1);
+    margin: 0 0;
+  }
+  25% {
+    background-position: 300%;
+    -webkit-transform: scale(1.3, 1.3);
+            transform: scale(1.3, 1.3);
+    margin: 0 .5rem;
+  }
+  50% {
+    background-position: 200%;
+    -webkit-transform: scale(1.6, 1.6);
+            transform: scale(1.6, 1.6);
+    margin: 0 1rem;
+  }
+  75% {
+    background-position: 100%;
+    -webkit-transform: scale(1.3, 1.3);
+            transform: scale(1.3, 1.3);
+    margin: 0 .5rem;
+  }
+  100% {
+    background-position: 0%;
+    -webkit-transform: scale(1, 1);
+            transform: scale(1, 1);
+    margin: 0 0;
+  }
+}
+
+@keyframes heartBeating {
+  0% {
+    background-position: 400%;
+    -webkit-transform: scale(1, 1);
+            transform: scale(1, 1);
+    margin: 0 0;
+  }
+  25% {
+    background-position: 300%;
+    -webkit-transform: scale(1.3, 1.3);
+            transform: scale(1.3, 1.3);
+    margin: 0 .5rem;
+  }
+  50% {
+    background-position: 200%;
+    -webkit-transform: scale(1.6, 1.6);
+            transform: scale(1.6, 1.6);
+    margin: 0 1rem;
+  }
+  75% {
+    background-position: 100%;
+    -webkit-transform: scale(1.3, 1.3);
+            transform: scale(1.3, 1.3);
+    margin: 0 .5rem;
+  }
+  100% {
+    background-position: 0%;
+    -webkit-transform: scale(1, 1);
+            transform: scale(1, 1);
+    margin: 0 0;
+  }
+}
+
+@-webkit-keyframes rainbow {
+  0% {
+    background-position: 400%;
+  }
+  100% {
+    background-position: 0%;
+  }
+}
+
+@keyframes rainbow {
+  0% {
+    background-position: 400%;
+  }
+  100% {
+    background-position: 0%;
+  }
 }
 /*# sourceMappingURL=style.css.map */

@@ -4,3 +4,4 @@
 
 - explore -> 3 items
 - circle bar shadow
+- rocket rotate 180`deg

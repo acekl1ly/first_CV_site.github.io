@@ -5,20 +5,26 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
+    <!-- Normalize.css -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.1/normalize.min.css">
+    <!-- Fonts -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&family=Open+Sans&display=swap" rel="stylesheet">
+    <!-- Fontawesome -->
+    <script src="https://kit.fontawesome.com/1b07e5c928.js" crossorigin="anonymous"></script>
+    <!-- Styles -->
     <link rel="stylesheet" href="./styles/style.css">
 </head>
 <body>
     <header>
+        <!-- Navbar -->
         <div class="header">
             <a href="#"><img src="./img/logo/logo3.svg" alt="logo"></a>
             <nav>
                 <ul class="nav">
                     <li class="nav__item">
-                        <a href="#" class="active">Home</a>
+                        <a href="#home" class="active">Home</a>
                     </li>
                     <li class="nav__item">
                         <a href="#about-me">About me</a>
@@ -27,12 +33,14 @@
                         <a href="#skills">Skills</a>
                     </li>
                     <li class="nav__item">
-                        <a href="#">Contact me</a>
+                        <a href="#contact-me">Contact me</a>
                     </li>
                 </ul>
             </nav>
         </div>
-        <section>
+    
+        <!-- Home -->
+        <section id="home">
             <img src="./img/parallax/1/moon.png" alt="moon" id="moon">
             <img src="./img/parallax/1/stars.png" alt="stars" id="stars">
             <img src="./img/parallax/front.png" alt="Front mountain" id="frontMountain">
@@ -43,6 +51,19 @@
         </section>
         <script src="./js/parallax.js"></script>
     </header>
+    
+    <!-- Back to btn -->
+    <section class="back-to" >
+        <div id="back-to-container">
+            <a href="#footer" id="back-to-btn">
+                <i class="fab fa-gripfire" id="fire"></i>
+                <i class="fas fa-space-shuttle to-bottom" id="rocket"></i>
+            </a>
+        </div>
+        <script src="./js/backTo.js"></script>
+    </section>
+
+    <!-- About me -->
     <section>
         <div class="about-me" id="about-me">
             <div class="sections-header">
@@ -77,6 +98,8 @@
 
         </div>
     </section> 
+
+    <!-- Skills -->
     <section>
         <div class="skills" id="skills">
             <div class="sections-header">
@@ -152,6 +175,19 @@
           </div>
         </div>
     </section>
-    
+
+    <!-- Contact me -->
+    <section>
+        <div class="contact-me" id="contact-me">
+
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+        <div class="footer" id="footer">
+            <p>Made with <i class="fas fa-heart"></i> by <span>Abdurasul Djurayev</span></p>
+        </div>
+    </footer>
 </body>
 </html>

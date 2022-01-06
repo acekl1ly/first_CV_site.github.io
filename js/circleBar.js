@@ -32,7 +32,6 @@ function setStyle(progressBar,progressStartValue,progressEndValues) {
 const observer = new IntersectionObserver(entries => {
   entries.forEach(entry => {
     if (entry.isIntersecting || scrolled) {
-        console.log("ok");
         for ( var i = 0; i < progressBar.length; i++ ) {
             setStyle(progressBar[i],progressStartValue,progressEndValues[i])
         };

@@ -36,7 +36,6 @@ const observer2 = new IntersectionObserver(entries => {
       }
     );
   });
-
-window.addEventListener('scroll', () => {
+window.onload = window.addEventListener('scroll', () => {
     observer2.observe(exploreText)
 });

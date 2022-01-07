@@ -15,6 +15,13 @@
     <script src="https://kit.fontawesome.com/1b07e5c928.js" crossorigin="anonymous"></script>
     <!-- Styles -->
     <link rel="stylesheet" href="./styles/style.css">
+    <!-- forse page position to top at page refresh -->
+    <script>
+        history.scrollRestoration = "manual";
+        document.onbeforeunload = function () {
+            window.scrollTo(0, 0);
+        }
+    </script>
 </head>
 <body>
     <header>

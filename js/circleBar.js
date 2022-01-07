@@ -1,8 +1,8 @@
 let progressBar = document.querySelectorAll(".circle-bar__progress");
 let progressStartValue = 0;
 let progressEndValues = [90,75,68,65,58,60,57,57,65];
-let speed;
-let scrolled = true;
+let speed = 40;
+let scrolled = false;
 
 
 // progress bar filling animation function
@@ -18,15 +18,6 @@ function setStyle(progressBar,progressStartValue,progressEndValues) {
         }
     },speed);
 };
-
-// unknown error// on first run always miss animation, here is the solution ^_^'
-(()=>{
-    speed = 10;
-    for ( var i = 0; i < progressBar.length; i++ ) {
-        setStyle(progressBar[i],progressStartValue,progressEndValues[i])
-    }
-    return speed = 40;
-})();
 
 // Create the observer:
 const observer = new IntersectionObserver(entries => {
@@ -44,5 +35,18 @@ const observer = new IntersectionObserver(entries => {
   });
 });
 
+// execude after page load 
+window.onload = function () {
+    //unknown error// on first run always miss animation, here is the solution ^_^'
+// (()=>{
+//     speed = 10;
+//     for ( var i = 0; i < progressBar.length; i++ ) {
+//         setStyle(progressBar[i],progressStartValue,progressEndValues[i])
+//     }
+//     return speed = 40;
+// })();
+
 //call function
 observer.observe(skills);
+}
+

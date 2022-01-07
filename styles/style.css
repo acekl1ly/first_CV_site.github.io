@@ -25,7 +25,7 @@ ul {
   list-style-type: none;
 }
 
-header .header, header .header .nav, .back-to div a, .about-me, .skills, .contact-me, .footer, .about-me__passions, .circle-bars-container, .contact-me .contact-form {
+header .header, header .header .nav, .back-to div a, .about-me, .skills, .contact-me, .footer, .about-me__passions, .circle-bars-container, .contact-me .contact-form, .footer .social-media-container {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -529,10 +529,10 @@ header::before {
   border-bottom: 1px solid #2361c1;
   border-left: 1px solid #2361c1;
   border-radius: 1rem;
-  -webkit-transform: translate(0.5rem, 0.5rem);
-          transform: translate(0.5rem, 0.5rem);
-  -webkit-box-shadow: 0 0 10px #719ECE;
-          box-shadow: 0 0 10px #719ECE;
+  -webkit-transform: translate(0.5rem, -0.5rem);
+          transform: translate(0.5rem, -0.5rem);
+  -webkit-box-shadow: -3px 3px 10px #719ECE50;
+          box-shadow: -3px 3px 10px #719ECE50;
 }
 
 .contact-me .contact-form #form-text {
@@ -617,6 +617,154 @@ header::before {
   bottom: 0;
   overflow-y: hidden;
   width: 100%;
+}
+
+.footer .social-media-container {
+  gap: 2rem;
+  margin-bottom: 1.3rem;
+}
+
+.footer .social-media-container .tooltip {
+  position: relative;
+  display: inline-block;
+  padding: 1.5rem;
+  border: 2px solid #00f96c;
+  width: 6rem;
+  border-radius: 25%;
+  -webkit-transition: all linear 1s;
+  transition: all linear 1s;
+}
+
+.footer .social-media-container .tooltip .fab {
+  color: #ffffff;
+  font-size: 2.25rem;
+}
+
+.footer .social-media-container .tooltip:hover {
+  -webkit-transform: translate(0, -1rem);
+          transform: translate(0, -1rem);
+  border: 2px solid #2361c1;
+  border-radius: 50%;
+  -webkit-box-shadow: 0 2px 5px #719ECE;
+          box-shadow: 0 2px 5px #719ECE;
+}
+
+.footer .social-media-container #telegram:hover {
+  background: #279dec;
+}
+
+.footer .social-media-container #telegram:hover .fab {
+  -webkit-transform: skewX(1deg);
+          transform: skewX(1deg);
+  color: #ffffff;
+}
+
+.footer .social-media-container #instagram:hover {
+  background: #f5a329;
+}
+
+.footer .social-media-container #instagram:hover .fab {
+  -webkit-transform: skewX(1deg);
+          transform: skewX(1deg);
+  color: #ffffff;
+}
+
+.footer .social-media-container #linkedin:hover {
+  background: #1565af;
+}
+
+.footer .social-media-container #linkedin:hover .fab {
+  -webkit-transform: skewX(1deg);
+          transform: skewX(1deg);
+  color: #ffffff;
+}
+
+.footer .social-media-container #github:hover {
+  background: #ffffff;
+}
+
+.footer .social-media-container #github:hover .fab {
+  -webkit-transform: skewX(1deg);
+          transform: skewX(1deg);
+  color: #000000;
+}
+
+.footer .social-media-container #discord:hover {
+  background: #6e28e8;
+}
+
+.footer .social-media-container #discord:hover .fab {
+  -webkit-transform: skewX(1deg);
+          transform: skewX(1deg);
+  color: #ffffff;
+}
+
+.footer .social-media-container .tooltip .tooltiptext {
+  visibility: hidden;
+  width: 120px;
+  background-color: black;
+  color: #fff;
+  text-align: center;
+  border-radius: 6px;
+  padding: 5px 0;
+  position: absolute;
+  z-index: 1;
+  opacity: 0;
+  -webkit-transition: opacity .7s .5s;
+  transition: opacity .7s .5s;
+}
+
+.footer .social-media-container #telegram .tooltiptext {
+  top: -5px;
+  right: 120%;
+}
+
+.footer .social-media-container #instagram .tooltiptext,
+.footer .social-media-container #linkedin .tooltiptext,
+.footer .social-media-container #github .tooltiptext {
+  bottom: 150%;
+  left: 50%;
+  margin-left: -60px;
+}
+
+.footer .social-media-container #discord .tooltiptext {
+  top: -5px;
+  left: 120%;
+}
+
+.footer .social-media-container .tooltip .tooltiptext::after {
+  content: "";
+  position: absolute;
+  border-width: 5px;
+  border-style: solid;
+}
+
+.footer .social-media-container #telegram .tooltiptext::after {
+  top: 50%;
+  left: 100%;
+  margin-top: -5px;
+  border-color: transparent transparent transparent black;
+}
+
+.footer .social-media-container #instagram .tooltiptext::after,
+.footer .social-media-container #linkedin .tooltiptext::after,
+.footer .social-media-container #github .tooltiptext::after {
+  top: 100%;
+  left: 50%;
+  margin-left: -5px;
+  border-color: black transparent transparent transparent;
+}
+
+.footer .social-media-container #discord .tooltiptext::after {
+  top: 50%;
+  right: 100%;
+  margin-top: -5px;
+  border-color: transparent black transparent transparent;
+}
+
+.footer .social-media-container .tooltip:hover .tooltiptext {
+  visibility: visible;
+  opacity: 1;
 }
 
 .footer p {

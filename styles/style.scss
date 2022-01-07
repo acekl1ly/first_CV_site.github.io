@@ -418,8 +418,8 @@ header::before {
             border-bottom: 1px solid $border1;
             border-left: 1px solid $border1;
             border-radius: 1rem;
-            transform: translate(.5rem, .5rem);
-            box-shadow: 0 0 10px $formBoxShadow;         
+            transform: translate(0.5rem, -0.5rem);
+            box-shadow: -3px 3px 10px #719ECE50;         
         }
 
         #form-text {
@@ -500,6 +500,148 @@ header::before {
     bottom: 0;
     overflow-y: hidden;
     width: 100%;
+
+    .social-media-container {
+        @extend %flex-space-between;
+        gap: 2rem;
+        margin-bottom: 1.3rem;
+        
+        .tooltip {
+            position: relative;
+            display: inline-block;
+            padding: 1.5rem;
+            border: 2px solid $border2;
+            width: 6rem;
+            border-radius: 25%;
+            transition: all linear 1s;
+            
+            .fab {
+                color: $pureWhite;
+                font-size: 2.25rem;
+            }
+        }
+
+        .tooltip:hover {
+            transform: translate(0, -1rem);
+            border: 2px solid $border1;
+            border-radius: 50%;
+            box-shadow: 0 2px 5px $formBoxShadow;
+        }
+
+
+        #telegram:hover{
+            background: #279dec;
+
+            .fab{
+                transform: skewX(1deg);
+                color: $pureWhite;
+            }
+        }
+
+        #instagram:hover{
+            background: #f5a329;
+
+            .fab{
+                transform: skewX(1deg);
+                color: $pureWhite;
+            }
+        }
+
+        #linkedin:hover{
+            background: #1565af;
+
+            .fab{
+                transform: skewX(1deg);
+                color: $pureWhite;
+            }
+        }
+
+        #github:hover{
+            background: $pureWhite;
+            
+            .fab{
+                transform: skewX(1deg);
+                color: $black;
+            }
+        }
+
+        #discord:hover {
+            background: #6e28e8;
+
+            .fab{
+                transform: skewX(1deg);
+                color: $pureWhite;
+            }
+        }
+
+        .tooltip .tooltiptext {
+            visibility: hidden;
+            width: 120px;
+            background-color: black;
+            color: #fff;
+            text-align: center;
+            border-radius: 6px;
+            padding: 5px 0;
+            position: absolute;
+            z-index: 1;
+            opacity: 0;
+            transition: opacity .7s .5s;
+        }       
+
+        #telegram .tooltiptext {
+            top: -5px;
+            right: 120%;
+        }
+
+        #instagram .tooltiptext, 
+        #linkedin .tooltiptext, 
+        #github .tooltiptext{
+            bottom: 150%;
+            left: 50%;
+            margin-left: -60px;
+        }
+
+        #discord .tooltiptext {
+            top: -5px;
+            left: 120%;
+
+        }
+
+        .tooltip .tooltiptext::after {
+            content: "";
+            position: absolute;
+            border-width: 5px;
+            border-style: solid;
+        } 
+
+        #telegram .tooltiptext::after {
+            top: 50%;
+            left: 100%;
+            margin-top: -5px;
+            border-color: transparent transparent transparent black;
+        }
+
+        #instagram .tooltiptext::after, 
+        #linkedin .tooltiptext::after, 
+        #github .tooltiptext::after {
+            top: 100%;
+            left: 50%;
+            margin-left: -5px;
+            border-color: black transparent transparent transparent;
+        }        
+
+        #discord .tooltiptext::after {
+            top: 50%;
+            right: 100%;
+            margin-top: -5px;
+            border-color: transparent black transparent transparent;
+          }
+        
+        .tooltip:hover .tooltiptext {
+            visibility: visible;
+            opacity: 1;
+        }
+    }
 
     p {
         margin-bottom: 2.5rem;

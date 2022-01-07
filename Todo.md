@@ -1,5 +1,6 @@
 [1] - circleBar.js -> place for reverse animation !Finish
 [2] - snowing effect 
-[3] - buttons line effect
-[4] - add social media link to the footer
+[4] - input form effect
 [5] - debug rocket
+
+podnimayetsa, border, color, toltip popup

@@ -363,6 +363,7 @@ header::before {
             border-radius: 50%;
             display: grid;
             place-items: center;
+            box-shadow: 0 0 20px $formBoxShadow; 
         }
     
         .circle-bar__progress::before {
@@ -464,13 +465,33 @@ header::before {
             height: 0%;
             left: 0;
             bottom: 0;
+            margin-left: 13rem;
             background: $background;
-            transition: 1s;
-            border-radius: 50% 50% 0 0;
+            transition: 1.2s;
+            border-radius: 30rem 30rem 0 0;
         }
 
         #form-submit-btn:hover::before {
-            height: 150%;
+            height: 200%;
+            transform: translateX(-8rem);
+        }
+
+        #form-submit-btn::after {
+            content: '';
+            position: absolute;
+            width: 100%;
+            height: 0%;
+            right: 0;
+            top: 0;
+            margin-right: 13rem;
+            background: $background;
+            transition: 1.2s ;
+            border-radius: 0 0 30rem 30rem;
+        }
+
+        #form-submit-btn:hover::after {
+            height: 200%;
+            transform: translateX(8rem);
         }
     }
 }

@@ -25,7 +25,7 @@ ul {
   list-style-type: none;
 }
 
-header .header, header .header .nav, .back-to div a, .about-me, .skills, .contact-me, .footer, .about-me__passions, .circle-bars-container {
+header .header, header .header .nav, .back-to div a, .about-me, .skills, .contact-me, .footer, .about-me__passions, .circle-bars-container, .contact-me .contact-form {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -395,6 +395,7 @@ header::before {
 
 .about-me__passion h4, .about-me__passion p {
   text-align: left;
+  z-index: 2;
 }
 
 .about-me__passion h4 {
@@ -402,13 +403,37 @@ header::before {
   margin-bottom: 3rem;
 }
 
-.about-me__passion h4:before {
+.about-me__passion .about-me__responsive:before {
   position: absolute;
   top: -2.5rem;
   left: -9%;
-  content: url("../img/design.svg");
+  content: url("../img/about-me/1.png");
+  opacity: .5;
   width: 5rem;
   height: 5rem;
+  z-index: -1;
+}
+
+.about-me__passion .about-me__animated:before {
+  position: absolute;
+  top: -2.5rem;
+  left: -9%;
+  content: url("../img/about-me/2.png");
+  opacity: .5;
+  width: 5rem;
+  height: 5rem;
+  z-index: -1;
+}
+
+.about-me__passion .about-me__moderan:before {
+  position: absolute;
+  top: -2.5rem;
+  left: -9%;
+  content: url("../img/about-me/3.png");
+  opacity: .5;
+  width: 5rem;
+  height: 5rem;
+  z-index: -1;
 }
 
 .sections-header {
@@ -466,6 +491,101 @@ header::before {
   font-family: "Open Sans", sans-serif;
   font-size: 4rem;
   color: #E5E5E5;
+}
+
+.contact-me .contact-form {
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  margin-top: 5rem;
+  gap: 3rem;
+  width: 50vw;
+  height: auto;
+  font-family: "Montserrat", sans-serif;
+}
+
+.contact-me .contact-form__items {
+  width: 100%;
+  color: #E5E5E5;
+  background: #161240;
+  outline: none !important;
+  border-top: 1px solid transparent;
+  border-right: 1px solid transparent;
+  border-bottom: 1px solid #00f96c;
+  border-left: 1px solid #00f96c;
+  padding-left: 2rem;
+  -webkit-transition: all 0.5s linear;
+  transition: all 0.5s linear;
+  border-radius: 0 1rem  0 0;
+}
+
+.contact-me .contact-form__items:focus {
+  outline: none !important;
+  border-top: 1px solid transparent;
+  border-right: 1px solid transparent;
+  border-bottom: 1px solid #2361c1;
+  border-left: 1px solid #2361c1;
+  border-radius: 1rem;
+  -webkit-transform: translate(0.5rem, 0.5rem);
+          transform: translate(0.5rem, 0.5rem);
+  -webkit-box-shadow: 0 0 10px #719ECE;
+          box-shadow: 0 0 10px #719ECE;
+}
+
+.contact-me .contact-form #form-text {
+  padding-top: 1rem;
+}
+
+.contact-me .contact-form #form-name, .contact-me .contact-form #form-email {
+  height: 4rem;
+}
+
+.contact-me .contact-form #form-submit-btn {
+  position: relative;
+  padding: 1.5rem 5rem;
+  margin-bottom: 1rem;
+  cursor: pointer;
+  border: 1px solid #00f96c;
+  border-radius: 3rem;
+  background: #00f96c;
+  -webkit-transition: 1s;
+  transition: 1s;
+  overflow: hidden;
+  color: #161240;
+  transition: 1s;
+}
+
+.contact-me .contact-form #form-submit-btn:hover {
+  border: 1px solid #00f96c;
+  color: #00f96c;
+  -webkit-box-shadow: 0 0 10px #719ECE;
+          box-shadow: 0 0 10px #719ECE;
+  -webkit-transform: scale(1.1, 1.1);
+          transform: scale(1.1, 1.1);
+}
+
+.contact-me .contact-form #form-submit-btn span {
+  position: relative;
+  z-index: 10;
+  font-weight: 700;
+}
+
+.contact-me .contact-form #form-submit-btn::before {
+  content: '';
+  position: absolute;
+  width: 100%;
+  height: 0%;
+  left: 0;
+  bottom: 0;
+  background: #161240;
+  -webkit-transition: 1s;
+  transition: 1s;
+  border-radius: 50% 50% 0 0;
+}
+
+.contact-me .contact-form #form-submit-btn:hover::before {
+  height: 150%;
 }
 
 .footer {

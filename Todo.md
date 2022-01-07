@@ -1,7 +1,6 @@
 [1] - circleBar.js -> place for reverse animation !Finish
 [2] - snowing effect 
 [3] - buttons line effect
+[4] - submit button filling effect
 
-- explore -> 3 items
 - circle bar shadow
-- rocket rotate 180`deg

@@ -288,6 +288,7 @@ header::before {
 
         h4, p{
             text-align: left;
+            z-index: 2;         
         }
 
         h4 {
@@ -295,13 +296,37 @@ header::before {
             margin-bottom: 3rem;
         }
 
-        h4:before {
+        .about-me__responsive:before {
             position: absolute;
             top: -2.5rem;
             left: -9%;
-            content: url('../img/design.svg');
+            content: url('../img/about-me/1.png');
+            opacity: .5;
             width: 5rem;
             height: 5rem;
+            z-index: -1;
+        }
+
+        .about-me__animated:before {
+            position: absolute;
+            top: -2.5rem;
+            left: -9%;
+            content: url('../img/about-me/2.png');
+            opacity: .5;
+            width: 5rem;
+            height: 5rem;
+            z-index: -1;
+        }
+
+        .about-me__moderan:before {
+            position: absolute;
+            top: -2.5rem;
+            left: -9%;
+            content: url('../img/about-me/3.png');
+            opacity: .5;
+            width: 5rem;
+            height: 5rem;
+            z-index: -1;
         }
 
     }
@@ -359,6 +384,96 @@ header::before {
     }
 }
 
+.contact-me {
+    .contact-form {
+        @extend %flex-space-between;
+        flex-direction: column;
+        margin-top: 5rem;
+        gap: 3rem;
+        width: 50vw;
+        height: auto;
+        font-family: $fontFamily2;
+
+
+        &__items {
+            // height:8rem;
+            width: 100%;
+            color: $white;
+            background: $background;
+            outline: none !important;
+            border-top: 1px solid transparent;
+            border-right: 1px solid transparent;
+            border-bottom: 1px solid $border2;
+            border-left: 1px solid $border2;
+            padding-left: 2rem;
+            transition: all 0.5s linear;
+            border-radius: 0 1rem  0 0;
+        }
+
+        &__items:focus {
+            outline: none !important;
+            border-top: 1px solid transparent;
+            border-right: 1px solid transparent;
+            border-bottom: 1px solid $border1;
+            border-left: 1px solid $border1;
+            border-radius: 1rem;
+            transform: translate(.5rem, .5rem);
+            box-shadow: 0 0 10px $formBoxShadow;         
+        }
+
+        #form-text {
+            padding-top: 1rem;
+        }
+
+        #form-name, #form-email {
+            height: 4rem;
+        }
+        
+        #form-submit-btn {
+            position: relative;
+            padding: 1.5rem 5rem;
+            margin-bottom: 1rem;
+            cursor: pointer;
+            border: 1px solid $border2;
+            border-radius: 3rem;
+            background: $border2;
+            transition: 1s;
+            overflow: hidden;
+            color: $background;
+            transition: 1s;
+        }
+
+        #form-submit-btn:hover {
+            border: 1px solid $border2;
+            color: $border2;
+            box-shadow: 0 0 10px $formBoxShadow;
+            transform: scale(1.1, 1.1);
+        }
+
+        #form-submit-btn span {
+            position: relative;
+            z-index: 10;
+            font-weight: 700;
+        }
+
+
+        #form-submit-btn::before {
+            content: '';
+            position: absolute;
+            width: 100%;
+            height: 0%;
+            left: 0;
+            bottom: 0;
+            background: $background;
+            transition: 1s;
+            border-radius: 50% 50% 0 0;
+        }
+
+        #form-submit-btn:hover::before {
+            height: 150%;
+        }
+    }
+}
 
 .footer {
     bottom: 0;

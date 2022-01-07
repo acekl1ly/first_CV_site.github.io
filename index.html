@@ -16,12 +16,12 @@
     <!-- Styles -->
     <link rel="stylesheet" href="./styles/style.css">
     <!-- forse page position to top at page refresh -->
-    <script>
+    <!-- <script>
         history.scrollRestoration = "manual";
         document.onbeforeunload = function () {
             window.scrollTo(0, 0);
         }
-    </script>
+    </script> -->
 </head>
 <body>
     <header>
@@ -48,8 +48,8 @@
     
         <!-- Home -->
         <section id="home">
-            <img src="./img/parallax/1/moon.png" alt="moon" id="moon">
-            <img src="./img/parallax/1/stars.png" alt="stars" id="stars">
+            <img src="./img/parallax/moon.png" alt="moon" id="moon">
+            <img src="./img/parallax/stars.png" alt="stars" id="stars">
             <img src="./img/parallax/front.png" alt="Front mountain" id="frontMountain">
             <img src="./img/parallax/midMoundain.png" alt="Mid mountain" id="midMountain">
             <h2 id="AbdurasulDjurayev"> Abdurasul Djurayev</h2>
@@ -90,15 +90,15 @@
             
             <div class="about-me__passions">
                 <div class="about-me__passion">
-                    <h4>Responsive</h4>
+                    <h4 class="about-me__responsive">Responsive</h4>
                     <p>I can design the site based on your needs and suggestions. I can also design the site from scratch and consult you during the job.</p>
                 </div>
                 <div class="about-me__passion">
-                    <h4>Animated</h4>
+                    <h4 class="about-me__animated">Animated</h4>
                     <p>I can design the site based on your needs and suggestions. I can also design the site from scratch and consult you during the job.</p>
                 </div>
                 <div class="about-me__passion">
-                    <h4>Moderan</h4>
+                    <h4 class="about-me__moderan">Moderan</h4>
                     <p>I can design the site based on your needs and suggestions. I can also design the site from scratch and consult you during the job.</p>
                 </div>
             </div>
@@ -187,8 +187,44 @@
 
     <!-- Contact me -->
     <section>
-        <div class="contact-me" id="contact-me">
+        <div class="contact-me">
+            <div class="sections-header">
+                <h2> Skills</h2>
+            </div>
+            <img src="./img/separatorBlack1.png" alt="seperator" class="seperator">
+            <form class="contact-form" id="contact-me">
+                <input 
+                    type="text"
+                    class="contact-form__items" 
+                    placeholder="enter your name" 
+                    required
+                    id="form-name"
+                    />
 
+                <input 
+                    type="email"
+                    class="contact-form__items" 
+                    name="" 
+                    id="form-email" 
+                    placeholder="enter your email" 
+                    required
+                    />
+
+                <textarea 
+                    name="textarea" 
+                    id="form-text" 
+                    class="contact-form__items"
+                    cols="30" rows="10" 
+                    placeholder="your message" 
+                    required
+                    ></textarea>
+                <button 
+                    type="submit" 
+                    value="Submit"
+                    id="form-submit-btn"
+                    onclick="event.preventDefault();"
+                    ><span>Contact</span></button>
+            </form>
         </div>
     </section>
 

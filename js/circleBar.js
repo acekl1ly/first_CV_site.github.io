@@ -36,7 +36,7 @@ const observer = new IntersectionObserver(entries => {
 });
 
 // execude after page load 
-window.onload = function () {
+// document.onload = function () {
     //unknown error// on first run always miss animation, here is the solution ^_^'
 // (()=>{
 //     speed = 10;
@@ -47,6 +47,6 @@ window.onload = function () {
 // })();
 
 //call function
-observer.observe(skills);
-}
+    observer.observe(skills);
+// }
 

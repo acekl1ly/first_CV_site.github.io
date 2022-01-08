@@ -33,6 +33,241 @@ ul {
     align-items: center;
 }
 
+#theSite {
+    display: none;
+    // opacity: 1;
+    // transition: all 3s;
+}
+
+// Loader
+#loader{
+    width: 100vw;
+    height: 100vh;
+    opacity: 1;
+    background: $gradient1;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    transition: all 2s;
+}
+
+.content {
+    width: 300px;
+    height: 300px;
+    position: absolute;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 1000;
+ 
+    .planet {
+       width: 65%;
+       height: 65%;
+       background-color: $m-02;
+       border-radius: 100%;
+       position: absolute;
+       display: flex;
+       align-items: center;
+       transform-origin: center center;
+       box-shadow: inset 2px -10px 0px rgba(0, 0, 0, 0.1);
+       animation: planet 5s ease infinite alternate;
+ 
+       @keyframes planet {
+          0% {
+             transform: rotate(10deg);
+          }
+ 
+          100% {
+             transform: rotate(-10deg);
+          }
+       }
+ 
+       /* planet ring */
+       .ring {
+          position: absolute;
+          width: 300px;
+          height: 300px;
+          border-radius: 100%;
+          background-color: $m-04;
+          display: flex;
+          align-items: center;
+          justify-content: center;
+          transform-origin: 33% center;
+          box-shadow: 2px -10px 0px rgba(0, 0, 0, 0.1),
+             inset -5px -10px 0px rgba(0, 0, 0, 0.1);
+          animation: ring 3s ease infinite;
+ 
+          @keyframes ring {
+             0% {
+                transform: rotateX(110deg) rotateZ(0deg) translate(-50px, 5px);
+             }
+ 
+             100% {
+                transform: rotateX(110deg) rotateZ(360deg) translate(-50px, 5px);
+             }
+          }
+ 
+          /* small ball */
+          &:before {
+             content: "";
+             position: absolute;
+             width: 10px;
+             height: 30px;
+             border-radius: 100%;
+             background-color: $m-03;
+             z-index: 2;
+             left: calc(0px - 5px);
+             box-shadow: inset -3px 3px 0px rgba(0, 0, 0, 0.2);
+          }
+ 
+          /* inner ring */
+          &:after {
+             content: "";
+             position: absolute;
+             width: 240px;
+             height: 240px;
+             border-radius: 100%;
+             background-color: $m-03;
+             box-shadow: inset 2px -10px 0px rgba(0, 0, 0, 0.1);
+          }
+       }
+ 
+       /* to cover the back of the ring */
+       .cover-ring {
+          position: absolute;
+          width: 100%;
+          height: 50%;
+          border-bottom-left-radius: 80%;
+          border-bottom-right-radius: 80%;
+          border-top-left-radius: 100px;
+          border-top-right-radius: 100px;
+          transform: translate(0px, -17px);
+          background-color: $m-02;
+          z-index: 2;
+          box-shadow: inset 0px -2px 0px rgba(0, 0, 0, 0.1);
+       }
+ 
+       /* planet spots */
+       .spots {
+          width: 100%;
+          height: 100%;
+          display: flex;
+          align-items: center;
+          justify-content: center;
+          position: absolute;
+          z-index: 2;
+ 
+          span {
+             width: 30px;
+             height: 30px;
+             background-color: $m-01;
+             position: absolute;
+             border-radius: 100%;
+             box-shadow: inset -2px 3px 0px rgba(0, 0, 0, 0.3);
+             animation: dots 5s ease infinite alternate;
+ 
+             @keyframes dots {
+                0% {
+                   box-shadow: inset -3px 3px 0px rgba(0, 0, 0, 0.3);
+                }
+                100% {
+                   box-shadow: inset 3px 3px 0px rgba(0, 0, 0, 0.3);
+                }
+             }
+ 
+             &:nth-child(1) {
+                top: 20px;
+                right: 50px;
+             }
+ 
+             &:nth-child(2) {
+                top: 40px;
+                left: 50px;
+                width: 15px;
+                height: 15px;
+             }
+ 
+             &:nth-child(3) {
+                top: 80px;
+                left: 20px;
+                width: 25px;
+                height: 25px;
+             }
+ 
+             &:nth-child(4) {
+                top: 80px;
+                left: 90px;
+                width: 40px;
+                height: 40px;
+             }
+ 
+             &:nth-child(5) {
+                top: 160px;
+                left: 70px;
+                width: 15px;
+                height: 15px;
+             }
+ 
+             &:nth-child(6) {
+                top: 165px;
+                left: 125px;
+                width: 10px;
+                height: 10px;
+             }
+ 
+             &:nth-child(7) {
+                top: 90px;
+                left: 150px;
+                width: 15px;
+                height: 15px;
+             }
+          }
+       }
+    }
+ 
+    p {
+       color: $m-04;
+       font-size: 14px;
+       z-index: 2;
+       position: absolute;
+       bottom: -20px;
+       font-family: $fontFamily2;
+       animation: text 4s ease infinite;
+       width: 100px;
+       text-align: center;
+ 
+       @keyframes text {
+          0% {
+             transform: translateX(-30px);
+             letter-spacing: 0px;
+             color: $m-04;
+          }
+ 
+          25% {
+             letter-spacing: 3px;
+             color: $m-03;
+          }
+ 
+          50% {
+             transform: translateX(30px);
+             letter-spacing: 0px;
+             color: $m-04;
+          }
+ 
+          75% {
+             letter-spacing: 3px;
+             color: $m-03;
+          }
+ 
+          100% {
+             transform: translateX(-30px);
+             letter-spacing: 0px;
+             color: $m-04;
+          }
+       }
+    }
+ }
+
 header {
     background: linear-gradient($gradient1, $gradient2);
     min-height: 100vh;
@@ -80,7 +315,6 @@ header {
         position: relative;
         width: 100%;
         height: 100vh;
-        // padding: 10rem;
         display: flex;
         justify-content: center;
         align-items: center;
@@ -111,7 +345,6 @@ header {
 
         #AbdurasulDjurayev {
             position: absolute;
-            left: -70rem;
             z-index: 5;
             color: $pureWhite;
             white-space: nowrap;
@@ -251,10 +484,6 @@ header::before {
     // z-index: 10;
 }
 
-.skills {
-    padding: 0rem 20rem 0 20rem;
-}
-
 .about-me {  
     &__text , &__text2 {
         margin-bottom: 8rem;
@@ -275,7 +504,6 @@ header::before {
     }
 
     &__passions{
-        // display: flex;
         @extend %flex-space-between;
         justify-content: center;
         flex-wrap: wrap;   
@@ -332,6 +560,10 @@ header::before {
     }
 }
 
+.skills {
+    padding: 0rem 20rem 0 20rem;
+}
+
 .sections-header {
     font-family: $fontFamily2;
     text-transform: uppercase;
@@ -373,7 +605,7 @@ header::before {
             width: 84%;
             background-color: $background;
             border-radius: 50%;
-            transform: translate(-50,-50);
+            // transform: translate(-50%,-50%);
         }
     
         .circle-bar__persentage {
@@ -407,7 +639,7 @@ header::before {
             border-bottom: 1px solid $border2;
             border-left: 1px solid $border2;
             padding-left: 2rem;
-            transition: all 0.5s linear;
+            transition: all 0.3s linear;
             border-radius: 0 1rem  0 0;
         }
 
@@ -513,7 +745,7 @@ header::before {
             border: 2px solid $border2;
             width: 6rem;
             border-radius: 25%;
-            transition: all linear 1s;
+            transition: all linear 0.5s;
             
             .fab {
                 color: $pureWhite;
@@ -576,7 +808,8 @@ header::before {
 
         .tooltip .tooltiptext {
             visibility: hidden;
-            width: 120px;
+            width: 100px;
+            margin-top: 2rem;
             background-color: black;
             color: #fff;
             text-align: center;
@@ -596,8 +829,8 @@ header::before {
         #instagram .tooltiptext, 
         #linkedin .tooltiptext, 
         #github .tooltiptext{
-            bottom: 150%;
-            left: 50%;
+            bottom: 125%;
+            left: 67%;
             margin-left: -60px;
         }
 

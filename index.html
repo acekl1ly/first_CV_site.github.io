@@ -17,13 +17,43 @@
     <link rel="stylesheet" href="./styles/style.css">
     <!-- forse page position to top at page refresh -->
     <script>
+        // Loader and Content
+        function showPage() {
+            // document.getElementById("loader").style.opacity = 0;
+            document.getElementById("loader").style.display = "none";
+            document.getElementById("theSite").style.display = "block";
+        }
+
+
+        // scroll to top at refresh
         history.scrollRestoration = "manual";
-        document.onbeforeunload = function () {
-            window.scrollTo(0, 0);
+            document.onbeforeunload = function () {
+                window.scrollTo(0, 0);
         }
     </script>
 </head>
-<body>
+<body onload="showPage()">
+    <!-- Loader -->
+    <div id="loader">
+        <div class="content">
+            <div class="planet">
+            <div class="ring"></div>
+                <div class="cover-ring"></div>
+            <div class="spots">
+                <span></span>
+                <span></span>
+                <span></span>
+                <span></span>
+                <span></span>
+                <span></span>
+                <span></span>
+        
+            </div>
+            </div>
+            <p>loading</p>
+        </div>
+    </div>
+<div id="theSite">
     <header>
         <!-- Navbar -->
         <div class="header">
@@ -52,13 +82,13 @@
             <img src="./img/parallax/stars.png" alt="stars" id="stars">
             <img src="./img/parallax/front.png" alt="Front mountain" id="frontMountain">
             <img src="./img/parallax/midMoundain.png" alt="Mid mountain" id="midMountain">
-            <h2 id="AbdurasulDjurayev"> Abdurasul Djurayev</h2>
+            <h2 id="AbdurasulDjurayev" data-text="Abdurasul Djurayev"> Abdurasul Djurayev</h2>
             <a href="#about-me" id="explore">Explore</a>
             <img src="./img/parallax/backMountain.png" alt="back mountain" id="backMountain">
         </section>
     </header>
     <!-- parallax js -->
-    <script src="./js/parallax.js" defer></script>
+    <script src="./js/parallax.js" ></script>
     
     <!-- Back to btn -->
     <section class="back-to" >
@@ -79,9 +109,9 @@
                 <h2> About me</h2>
             </div>
             <div class="about-me__text">
-                I am self-made web developer. I started with my intel celeron laptop
-                 and with desire to create a website (Honestly,first I'd wanted to hack ^_^` ) ... .
-                After some years, my passion brought me here, and now I can create websites. 
+                I am self-made web developer. I started with my desire to create a website (Honestly,
+                I wanted to hack it^_^` ) ... .
+                After some years, my passion brought me here, and now I can create websites that are : 
             </div>
             <div class="about-me__text2" id="exploreText">
                 explore
@@ -91,15 +121,21 @@
             <div class="about-me__passions">
                 <div class="about-me__passion">
                     <h4 class="about-me__responsive">Responsive</h4>
-                    <p>I can design the site based on your needs and suggestions. I can also design the site from scratch and consult you during the job.</p>
+                    <p>
+                        The website will be responsive and adaptive, and will work as it should.
+                    </p>
                 </div>
                 <div class="about-me__passion">
                     <h4 class="about-me__animated">Animated</h4>
-                    <p>I can design the site based on your needs and suggestions. I can also design the site from scratch and consult you during the job.</p>
+                    <p>
+                        Websites without some cool animations are not websites!
+                    </p>
                 </div>
                 <div class="about-me__passion">
                     <h4 class="about-me__moderan">Moderan</h4>
-                    <p>I can design the site based on your needs and suggestions. I can also design the site from scratch and consult you during the job.</p>
+                    <p>
+                        No more jQuery, only effective, lightweight and secure new technologies.
+                    </p>
                 </div>
             </div>
 
@@ -204,7 +240,7 @@
                 <input 
                     type="email"
                     class="contact-form__items" 
-                    name="" 
+                    name="email" 
                     id="form-email" 
                     placeholder="enter your email" 
                     required
@@ -233,31 +269,31 @@
         <div class="footer" id="footer">
             <div class="social-media-container">
                 <div class="tooltip" id="telegram">
-                    <a href="#">
+                    <a href="https://t.me/Djurayev_Abdurasul">
                         <i class="fab fa-telegram-plane"></i>
                         <span class="tooltiptext">Telegram</span>
                     </a>
                 </div>
                 <div class="tooltip" id="instagram">
-                    <a href="#">
+                    <a href="https://www.instagram.com/kaktuschik_06/">
                         <i class="fab fa-instagram"></i>
                         <span class="tooltiptext">Instagram</span>
                     </a>
                 </div>
                 <div class="tooltip" id="linkedin">
-                    <a href="#">
+                    <a href="https://www.linkedin.com/in/abdurasul-jorayev/">
                         <i class="fab fa-linkedin"></i>
                         <span class="tooltiptext">LinkedIn</span>
                     </a>
                 </div>
                 <div class="tooltip" id="github">
-                    <a href="#">
+                    <a href="https://github.com/AbdurasulDj">
                         <i class="fab fa-github"></i>
                         <span class="tooltiptext">GitHub</span>
                     </a>
                 </div>
                 <div class="tooltip" id="discord">
-                    <a href="#">
+                    <a href="https://discord.gg/8Q94kW8aby">
                         <i class="fab fa-discord"></i>
                         <span class="tooltiptext">Discord</span>
                     </a>
@@ -266,5 +302,6 @@
             <p>Made with <i class="fas fa-heart"></i> by <span>Abdurasul Djurayev</span></p>
         </div>
     </footer>
+</div>
 </body>
 </html>

@@ -7,7 +7,7 @@ let explore = document.getElementById('explore');
 let backMountain = document.getElementById('backMountain');
 let header = document.querySelector('header');
 
-window.onload = 
+document.onload = 
     window.addEventListener('scroll', function() {
         let value = window.scrollY;
         stars.style.left = value * 0.25 + 'px';

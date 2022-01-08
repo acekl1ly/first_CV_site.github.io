@@ -1,7 +1,11 @@
-[1] - circleBar.js -> place for reverse animation !Finish
-[2] - snowing effect 
-[4] - input form effect
-[5] - debug rocket
-[6] - add loader
+[*] - rocket preloader
 
-podnimayetsa, border, color, toltip popup
+
+[!] - snowing effect on click to the moon 
+[!] - debug rocket
+[!] - typing effect about me
+[!] - preloader fade out animation
+
+
+
+[1] - responsivnes

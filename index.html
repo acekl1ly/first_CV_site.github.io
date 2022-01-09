@@ -5,6 +5,13 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
+    <!-- FavIcon -->
+    <link rel="icon" href="./favicon.ico">
+    <link rel="icon" href="./img/favicon/android-chrome-192x192.png">
+    <link rel="icon" href="./img/favicon/android-chrome-512x512.png">
+    <link rel="icon" href="./img/favicon/apple-touch-icon.png">
+    <link rel="icon" href="./img/favicon/favicon-16x16.png">
+    <link rel="icon" href="./img/favicon/favicon-32x32.png">
     <!-- Normalize.css -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.1/normalize.min.css">
     <!-- Fonts -->
@@ -57,33 +64,32 @@
     <header>
         <!-- Navbar -->
         <div class="header">
-                <nav id="menu">
-                    <ul class="nav">
-                        <a href="#" id="logo"><img src="./img/logo/logo3.svg" alt="logo"></a>
-                        <div class="menu-items">
-                            <li id="nav-icon" onclick="toggleMenu();">
-                                <p></p>
-                                <i class="fas fa-chevron-circle-down"></i>
-                            </li>
-                            <li class="nav__items visible">
-                                <a href="#home" class="active">Home</a>
-                                <i class="fas fa-chevron-circle-down link-icon"></i>
-                            </li>
-                            <li class="nav__items visible">
-                                <a href="#about-me">About me</a>
-                                <i class="fas fa-chevron-circle-down link-icon"></i>
-                            </li>
-                            <li class="nav__items visible">
-                                <a href="#skills">Skills</a>
-                                <i class="fas fa-chevron-circle-down link-icon"></i>
-                            </li>
-                            <li class="nav__items visible">
-                                <a href="#contact-me">Contact me</a>
-                                <i class="fas fa-chevron-circle-down link-icon"></i>
-                            </li>
-                        </div>
-                    </ul>
-                </nav>
+            <div class="logo-container">
+                <a href="#" id="logo"><img src="./img/logo/logo3.svg" alt="logo"></a>
+            </div>
+            <nav id="menu">
+                <ul class="nav">
+                        <li id="nav-icon" onclick="toggleMenu();">
+                            <i class="fas fa-chevron-circle-down"></i>
+                        </li>
+                        <li class="nav__items visible">
+                            <a href="#home" class="active">Home</a>
+                            <i class="fas fa-chevron-circle-down link-icon"></i>
+                        </li>
+                        <li class="nav__items visible">
+                            <a href="#about-me">About me</a>
+                            <i class="fas fa-chevron-circle-down link-icon"></i>
+                        </li>
+                        <li class="nav__items visible">
+                            <a href="#skills">Skills</a>
+                            <i class="fas fa-chevron-circle-down link-icon"></i>
+                        </li>
+                        <li class="nav__items visible">
+                            <a href="#contact-me">Contact me</a>
+                            <i class="fas fa-chevron-circle-down link-icon"></i>
+                        </li>
+                </ul>
+            </nav>
         </div>
     
         <!-- Home -->

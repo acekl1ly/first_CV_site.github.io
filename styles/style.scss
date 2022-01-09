@@ -280,23 +280,34 @@ header {
         background-attachment: fixed;
         padding: 3rem 10rem ;
         background: transparent;
-        // @extend %flex-space-between;
+        @extend %flex-space-between;
         z-index: 1000;
         img {
             width: 55px;
             height: 65px;
         }
 
+        .menu {
+            background: $background50;
+            height: auto;
+            width: auto;
+        }
+
         .nav {
             width: 100%;
             @extend %flex-space-between;
+            justify-content: flex-end;
+            align-self: center;
             font-family: $fontFamily2;
-
-            .menu-items {
-                @extend %flex-space-between;
-                width: 30vw;
-            }
             
+            li {
+                margin-left: 1rem;
+            }
+
+            .margin-top {
+                margin-top: 2.2rem;
+            }
+
             #nav-icon {
                 display: none;
             }   
@@ -1000,54 +1011,33 @@ header::before {
     
     header {
         .header {
-            position: absolute;
-            width: 100%;
-            background-repeat: no-repeat;
-            background-size: cover;
-            background-attachment: fixed;
-            padding: 3rem 10rem ;
-            background: transparent;
-            z-index: 1000;
-            img {
-                width: 55px;
-                height: 65px;
+
+            .logo-container {
+                height: 100%;
+                align-self: self-start;
+
+                #logo {
+                    // align-self: self-start;
+                }
             }
 
             .nav {
                 width: 100%;
                 height: 100%;
-                flex-direction: row;
+                flex-direction: column;
                 align-items: flex-end;
-                padding-right: 5rem;
-
-                #logo {
-                    align-self: self-start;
-                }
-
-                .menu-items { 
-                    align-self: center;
-                    flex-direction: column;
-                    justify-content: flex-end;
-                    align-items: flex-end;
-                    width: auto;
-                }
+                // padding-right: 5rem;
 
                 .opened {
                     width: auto;
                     height: auto;
                 }
 
-                li {
-                    // margin: 1rem 0;
-                    // float: right;
-                    // display: block;
-                }
-
                 #nav-icon {
                     display: block;
                     font-size: 2rem;
                     cursor: pointer;
-                    align-self: center;
+                    align-self: flex-end;
                 }
 
                 .link-icon {
@@ -1057,6 +1047,8 @@ header::before {
                 &__items {
                     display: none;
                 }
+
+                
 
                 a {
                     padding: 1rem 1.5rem;

@@ -1,11 +1,11 @@
-let menuButton = document.getElementById('nav-icon');
+let menuIcon = document.getElementById('nav-icon');
 let menuItems = document.querySelector(".menu-items");
 let menu = document.getElementById("menu");
 
 
     function toggleMenu () {
-        // menu.classList.toggle("menu");
-        menuItems.classList.toggle("opened")
+        menu.classList.toggle("menu");
+        menuIcon.classList.toggle("margin-top")
 
 
         const navs = document.querySelectorAll('.nav__items')

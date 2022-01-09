@@ -24,12 +24,12 @@
             document.getElementById("theSite").style.display = "block";
         }
 
-
         // scroll to top at refresh
         history.scrollRestoration = "manual";
             document.onbeforeunload = function () {
                 window.scrollTo(0, 0);
         }
+
     </script>
 </head>
 <body onload="showPage()">
@@ -57,23 +57,33 @@
     <header>
         <!-- Navbar -->
         <div class="header">
-            <a href="#"><img src="./img/logo/logo3.svg" alt="logo"></a>
-            <nav>
-                <ul class="nav">
-                    <li class="nav__item">
-                        <a href="#home" class="active">Home</a>
-                    </li>
-                    <li class="nav__item">
-                        <a href="#about-me">About me</a>
-                    </li>
-                    <li class="nav__item">
-                        <a href="#skills">Skills</a>
-                    </li>
-                    <li class="nav__item">
-                        <a href="#contact-me">Contact me</a>
-                    </li>
-                </ul>
-            </nav>
+                <nav id="menu">
+                    <ul class="nav">
+                        <a href="#" id="logo"><img src="./img/logo/logo3.svg" alt="logo"></a>
+                        <div class="menu-items">
+                            <li id="nav-icon" onclick="toggleMenu();">
+                                <p></p>
+                                <i class="fas fa-chevron-circle-down"></i>
+                            </li>
+                            <li class="nav__items visible">
+                                <a href="#home" class="active">Home</a>
+                                <i class="fas fa-chevron-circle-down link-icon"></i>
+                            </li>
+                            <li class="nav__items visible">
+                                <a href="#about-me">About me</a>
+                                <i class="fas fa-chevron-circle-down link-icon"></i>
+                            </li>
+                            <li class="nav__items visible">
+                                <a href="#skills">Skills</a>
+                                <i class="fas fa-chevron-circle-down link-icon"></i>
+                            </li>
+                            <li class="nav__items visible">
+                                <a href="#contact-me">Contact me</a>
+                                <i class="fas fa-chevron-circle-down link-icon"></i>
+                            </li>
+                        </div>
+                    </ul>
+                </nav>
         </div>
     
         <!-- Home -->
@@ -89,7 +99,9 @@
     </header>
     <!-- parallax js -->
     <script src="./js/parallax.js" ></script>
-    
+    <!-- Menu js -->
+    <script src="./js/menu.js"></script>
+
     <!-- Back to btn -->
     <section class="back-to" >
         <div id="back-to-container">

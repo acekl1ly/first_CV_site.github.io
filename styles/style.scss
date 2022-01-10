@@ -422,7 +422,7 @@ header::after {
     left: 0;
     width: 100%;
     height: 10rem;
-    background: linear-gradient(to top, blue, transparent);
+    background: linear-gradient(to top, $background, transparent);
     z-index: 100;
 }
 
@@ -532,12 +532,15 @@ header::after {
     // z-index: 10;
 }
 
-.about-me {  
+.about-me-section {
     padding-top: 5rem;
     overflow: hidden;
     width: 100%;
     height: 100%;
+}
 
+.about-me {  
+    
     &__text , &__text2 {
         margin-bottom: 8rem;
     }

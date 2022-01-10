@@ -13,8 +13,21 @@
         }
         header {
             width: 100%;
-            height: 90vh;
+            min-height: 100vh;
+            max-height: 100vh;
             background: yellow;
+        }
+
+        .sections-header {
+            font-family: monospace;
+            text-transform: uppercase;
+            letter-spacing: .5rem;
+            align-items: center;
+            font-weight: 700;
+            border: 5px solid white;
+            padding: 2rem;
+            width: 25rem;
+            margin-bottom: 5rem;
         }
         header::before {
             content: '';
@@ -36,6 +49,14 @@
 </head>
 <body>
     <header></header>
-    <section></section>
+    <section>
+        <div>
+            <div class="sections-header">
+                <h2>
+                    section
+                </h2>
+            </div>
+        </div>
+    </section>
 </body>
 </html>

@@ -322,7 +322,7 @@ header {
             }
 
             .margin-top {
-                margin-top: 2.2rem;
+                margin-top: 3.2rem;
             }
 
             #nav-icon {
@@ -331,7 +331,7 @@ header {
             }
 
             #nav-icon:active {
-                color: red;
+                color: $background;
             }
 
             .link-icon {
@@ -1077,6 +1077,10 @@ header::before {
                     font-size: 2rem;
                     cursor: pointer;
                     align-self: flex-end;
+                }
+
+                li {
+                    margin-top: 2rem;
                 }
 
                 .link-icon {

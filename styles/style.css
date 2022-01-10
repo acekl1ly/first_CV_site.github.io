@@ -441,7 +441,7 @@ header .header .nav li {
 }
 
 header .header .nav .margin-top {
-  margin-top: 2.2rem;
+  margin-top: 3.2rem;
 }
 
 header .header .nav #nav-icon {
@@ -453,7 +453,7 @@ header .header .nav #nav-icon {
 }
 
 header .header .nav #nav-icon:active {
-  color: red;
+  color: #161240;
 }
 
 header .header .nav .link-icon {
@@ -1339,6 +1339,9 @@ header::before {
     cursor: pointer;
     -ms-flex-item-align: end;
         align-self: flex-end;
+  }
+  header .header .nav li {
+    margin-top: 2rem;
   }
   header .header .nav .link-icon {
     display: inline-block;

@@ -282,7 +282,8 @@ ul {
 
 header {
     background: linear-gradient($gradient1, $gradient2);
-    min-height: 100vh;
+    min-height: 90vh;
+    height: 100%;
     max-height: 100vh;
 
     .position-fixed {
@@ -530,7 +531,7 @@ header::before {
 }
 
 .about-me {  
-    // margin-top: 10vh;
+    padding-top: 5rem;
     &__text , &__text2 {
         margin-bottom: 8rem;
     }

@@ -321,6 +321,11 @@ header {
                 margin-left: 1rem;
             }
 
+            &__items {
+                // opacity: 1;
+                // transition: all 2s ;
+            }
+
             .margin-top {
                 margin-top: 2.2rem;
             }
@@ -988,13 +993,7 @@ header::before {
 
 // media queries
 // 320px.
-// @media only screen and (max-width: 320px) {
-//     // header {
-//     //     section h2#AbdurasulDjurayev {
-//     //         font-size: 3.5rem;
-//     //     }
-//     // }
-// }
+
 
 // 480px.
 @media only screen and ( max-width: 480px) {
@@ -1090,6 +1089,8 @@ header::before {
 
                 &__items {
                     display: none;
+                    // opacity: 0;
+                    // transition: all 2s ;
                 }
 
                 a {

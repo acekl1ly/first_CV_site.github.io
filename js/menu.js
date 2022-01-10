@@ -9,7 +9,7 @@ let menu = document.getElementById("menu");
         headerPosition.classList.toggle("position-fixed");
 
         const navs = document.querySelectorAll('.nav__items')
-
+        
         if (navs[1].style.display === "flex") {
             navs.forEach(nav => {
                 nav.style.display = "none";
@@ -18,7 +18,7 @@ let menu = document.getElementById("menu");
             menu.style.height = "0";
         } else {
             navs.forEach(nav => {
-                nav.style.display = "flex";
+                nav.style.display = "flex"
             });
 
             menu.style.height = "100%";

@@ -288,9 +288,19 @@ header {
         }
 
         .menu {
+            height: 100%;
+            width: 100%;
+        }
+
+        .menu::before {
+            content: '';
+            width: 100vw;
+            height: 100vh;
+            position: absolute;
+            top:0;
+            left: 0;
+            z-index: 1;
             background: $background50;
-            height: auto;
-            width: auto;
         }
 
         .nav {
@@ -299,6 +309,8 @@ header {
             justify-content: flex-end;
             align-self: center;
             font-family: $fontFamily2;
+            position: relative;
+            z-index: 3;
             
             li {
                 margin-left: 1rem;
@@ -758,7 +770,7 @@ header::before {
 
 .footer {
     bottom: 0;
-    overflow-y: hidden;
+    overflow: hidden;
     width: 100%;
 
     .social-media-container {
@@ -959,34 +971,6 @@ header::before {
             }
         }
 
-        // @keyframes heartBeating {
-        //     0% {
-        //         transform: scale(1,1); 
-        //         margin: 0 0;
-        //         color: gold; 
-        //     }
-        //     25% {
-        //         transform: scale(1.3,1.3); 
-        //         margin: 0 .5rem;
-        //         color: orange;
-        //     }
-        //     50% {
-        //         transform: scale(1.6,1.6); 
-        //         margin: 0 1rem;
-        //         color: red;
-        //     }
-        //     75% {
-        //         transform: scale(1.3,1.3); 
-        //         margin: 0 .5rem;
-        //         color: orange;
-        //     }
-        //     100% {
-        //         transform: scale(1,1); 
-        //         margin: 0 0;
-        //         color: gold;
-        //     }
-        // }
-
         // Change from 0 to 400 if there is error
         @keyframes rainbow {
             0% {
@@ -1000,10 +984,44 @@ header::before {
 }
 
 // media queries
+// 320px.
+@media only screen and (max-width: 320px) {
+    // header {
+    //     section h2#AbdurasulDjurayev {
+    //         font-size: 3.5rem;
+    //     }
+    // }
+}
+
+// 480px.
+@media only screen and ( max-width: 480px) and (min-width: 320) {
+    header {
+        section h2#AbdurasulDjurayev {
+            font-size: 2.5rem;
+        }
+    }
+}
 
 /* Extra small devices (phones, 600px and down) */
 @media only screen and (max-width: 600px) {
+    header {
+        section h2#AbdurasulDjurayev {
+            font-size: 3.5rem;
+        }
+    }
 
+    .back-to {
+    
+        div {
+            margin: 1.5rem 0;
+            padding: 2rem 4rem;
+        }
+    }
+
+    .footer {
+        padding: 0;
+        padding-top: 3rem;
+    }
 }
 
 /* Medium devices (landscape tablets, 768px and up) */
@@ -1015,10 +1033,6 @@ header::before {
             .logo-container {
                 height: 100%;
                 align-self: self-start;
-
-                #logo {
-                    // align-self: self-start;
-                }
             }
 
             .nav {
@@ -1097,9 +1111,16 @@ header::before {
 
 /* Large devices (laptops/desktops, 992px and up) */
 @media only screen and (max-width: 900px) {
-    header .header {
-        padding: 3rem 5rem;
-    }
+    header {
+        .header {
+            padding: 3rem 5rem;
+        }
+
+        section #AbdurasulDjurayev {
+            font-size: 5rem;
+        }
+    }   
+
     .about-me {
         padding: 0rem 5rem 0 5rem;
     }

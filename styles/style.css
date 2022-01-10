@@ -402,9 +402,19 @@ header .header img {
 }
 
 header .header .menu {
+  height: 100%;
+  width: 100%;
+}
+
+header .header .menu::before {
+  content: '';
+  width: 100vw;
+  height: 100vh;
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: 1;
   background: #16124050;
-  height: auto;
-  width: auto;
 }
 
 header .header .nav {
@@ -416,6 +426,8 @@ header .header .nav {
       -ms-grid-row-align: center;
       align-self: center;
   font-family: "Montserrat", sans-serif;
+  position: relative;
+  z-index: 3;
 }
 
 header .header .nav li {
@@ -980,7 +992,7 @@ header::before {
 
 .footer {
   bottom: 0;
-  overflow-y: hidden;
+  overflow: hidden;
   width: 100%;
 }
 
@@ -1249,7 +1261,27 @@ header::before {
   }
 }
 
+@media only screen and (max-width: 480px) and (min-width: 320) {
+  header section h2#AbdurasulDjurayev {
+    font-size: 2.5rem;
+  }
+}
+
 /* Extra small devices (phones, 600px and down) */
+@media only screen and (max-width: 600px) {
+  header section h2#AbdurasulDjurayev {
+    font-size: 3.5rem;
+  }
+  .back-to div {
+    margin: 1.5rem 0;
+    padding: 2rem 4rem;
+  }
+  .footer {
+    padding: 0;
+    padding-top: 3rem;
+  }
+}
+
 /* Medium devices (landscape tablets, 768px and up) */
 @media only screen and (max-width: 768px) {
   header .header .logo-container {
@@ -1324,6 +1356,9 @@ header::before {
 @media only screen and (max-width: 900px) {
   header .header {
     padding: 3rem 5rem;
+  }
+  header section #AbdurasulDjurayev {
+    font-size: 5rem;
   }
   .about-me {
     padding: 0rem 5rem 0 5rem;

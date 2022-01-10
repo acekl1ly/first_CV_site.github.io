@@ -1062,10 +1062,11 @@ header {
 @media only screen and (max-width: 768px) {
     
     header {
+        width: 90%;
         section {
             img {
                 // transform: scale(0.8, 0.8);
-                height: 90%;
+                // height: 90%;
             }
         }
 

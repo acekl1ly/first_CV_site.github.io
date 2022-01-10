@@ -395,8 +395,8 @@ header .header, header .header .nav, .back-to div a, .about-me, .skills, .contac
 header {
   background: -webkit-gradient(linear, left top, left bottom, from(#2b1055), to(#7597de));
   background: linear-gradient(#2b1055, #7597de);
-  min-height: 90vh;
-  max-height: 90vh;
+  min-height: 100vh;
+  max-height: 100vh;
 }
 
 header .position-fixed {
@@ -738,10 +738,6 @@ header::before {
   padding: 10rem 20rem 0 20rem;
   text-align: center;
   color: #E5E5E5;
-}
-
-.about-me {
-  margin-top: 15vh;
 }
 
 .about-me__text, .about-me__text2 {

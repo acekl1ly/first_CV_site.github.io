@@ -268,9 +268,25 @@ ul {
     }
  }
 
+ .menu {
+    content: '';
+    width: 100%;
+    height: 0;
+    position: fixed;
+    top:0;
+    left: 0;
+    z-index: 100;
+    background: $background90;
+    transition: height 2s;
+}
+
 header {
     background: linear-gradient($gradient1, $gradient2);
     min-height: 100vh;
+
+    .position-fixed {
+        position: fixed !important;
+    }
 
     .header {
         position: absolute;
@@ -287,20 +303,9 @@ header {
             height: 65px;
         }
 
-        .menu {
-            height: 100%;
-            width: 100%;
-        }
-
-        .menu::before {
-            content: '';
-            width: 100vw;
-            height: 100vh;
-            position: absolute;
-            top:0;
-            left: 0;
-            z-index: 1;
-            background: $background50;
+        #logo {
+            position: relative;
+            z-index: 3;
         }
 
         .nav {
@@ -322,7 +327,11 @@ header {
 
             #nav-icon {
                 display: none;
-            }   
+            }
+
+            #nav-icon:active {
+                color: red;
+            }
 
             .link-icon {
                 display: none;
@@ -339,13 +348,6 @@ header {
             a:hover, a.active {
                 background: $pureWhite;
                 color: $gradient1;
-            }
-            #logo {
-                display: inline-block;
-            }
-            #logo:hover {
-                background: none;
-                color: none;;
             }
         }     
     }
@@ -1022,7 +1024,7 @@ header::before {
                 
             .tooltip {
                     font-size: 1rem;
-                    padding: 0.5rem;
+                    padding: 0.7rem;
                     border: 1px solid #00f96c;
                     width: 4rem;
                     height: auto;
@@ -1069,7 +1071,6 @@ header::before {
                 height: 100%;
                 flex-direction: column;
                 align-items: flex-end;
-                // padding-right: 5rem;
 
                 .opened {
                     width: auto;
@@ -1090,8 +1091,6 @@ header::before {
                 &__items {
                     display: none;
                 }
-
-                
 
                 a {
                     padding: 1rem 1.5rem;

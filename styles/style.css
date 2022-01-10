@@ -392,15 +392,6 @@ header .header, header .header .nav, .back-to div a, .about-me, .skills, .contac
   transition: height 2s;
 }
 
-.show {
-  -webkit-transition: opacity 400ms;
-  transition: opacity 400ms;
-}
-
-.hide {
-  opacity: 0;
-}
-
 header {
   background: -webkit-gradient(linear, left top, left bottom, from(#2b1055), to(#7597de));
   background: linear-gradient(#2b1055, #7597de);
@@ -455,6 +446,10 @@ header .header .nav .margin-top {
 
 header .header .nav #nav-icon {
   display: none;
+  -webkit-transition: -webkit-transform 2s;
+  transition: -webkit-transform 2s;
+  transition: transform 2s;
+  transition: transform 2s, -webkit-transform 2s;
 }
 
 header .header .nav #nav-icon:active {

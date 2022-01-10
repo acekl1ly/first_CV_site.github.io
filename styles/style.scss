@@ -285,6 +285,7 @@ header {
     min-height: 90vh;
     height: 100%;
     max-height: 100vh;
+    overflow: hidden;
 
     .position-fixed {
         position: fixed !important;
@@ -532,6 +533,7 @@ header::after {
 
 .about-me {  
     padding-top: 5rem;
+    overflow: hidden;
     &__text , &__text2 {
         margin-bottom: 8rem;
     }

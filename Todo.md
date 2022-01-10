@@ -8,5 +8,4 @@
 
 
 
-[1] - responsivnes
-        menu
+tooltip , header::before, logo and menu

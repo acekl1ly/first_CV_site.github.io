@@ -1265,9 +1265,12 @@ header::before {
   }
 }
 
-@media only screen and (max-width: 480px) and (min-width: 320) {
+@media only screen and (max-width: 480px) {
   header section h2#AbdurasulDjurayev {
     font-size: 2.5rem;
+  }
+  .about-me__passion {
+    width: 70%;
   }
   .contact-me {
     margin-left: 0;
@@ -1277,8 +1280,13 @@ header::before {
   }
   .footer .social-media-container {
     gap: 1rem;
-    -ms-flex-wrap: wrap;
-        flex-wrap: wrap;
+  }
+  .footer .social-media-container .tooltip {
+    font-size: 1rem;
+    padding: 0.5rem;
+    border: 1px solid #00f96c;
+    width: 4rem;
+    height: auto;
   }
 }
 

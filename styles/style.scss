@@ -986,19 +986,26 @@ header::before {
 
 // media queries
 // 320px.
-@media only screen and (max-width: 320px) {
-    // header {
-    //     section h2#AbdurasulDjurayev {
-    //         font-size: 3.5rem;
-    //     }
-    // }
-}
+// @media only screen and (max-width: 320px) {
+//     // header {
+//     //     section h2#AbdurasulDjurayev {
+//     //         font-size: 3.5rem;
+//     //     }
+//     // }
+// }
 
 // 480px.
-@media only screen and ( max-width: 480px) and (min-width: 320) {
+@media only screen and ( max-width: 480px) {
     header {
         section h2#AbdurasulDjurayev {
             font-size: 2.5rem;
+        }
+    }
+
+    .about-me {
+
+        &__passion {
+            width: 70%
         }
     }
 
@@ -1011,8 +1018,15 @@ header::before {
 
     .footer {    
         .social-media-container {
-            gap: 1rem;
-            flex-wrap: wrap;
+            gap: 1rem;                
+                
+            .tooltip {
+                    font-size: 1rem;
+                    padding: 0.5rem;
+                    border: 1px solid #00f96c;
+                    width: 4rem;
+                    height: auto;
+                }
         }
     }
 }

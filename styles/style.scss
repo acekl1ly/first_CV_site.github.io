@@ -415,7 +415,7 @@ header {
     }
 }
 
-header::after {
+#transparent-bottom {
     content: '';
     position: absolute;
     bottom: 0;

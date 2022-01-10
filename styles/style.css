@@ -543,7 +543,7 @@ header section #explore {
           box-shadow: 2px 2px 10px #2b1055, -2px -2px 10px #ffffff;
 }
 
-header::before {
+header::after {
   content: '';
   position: absolute;
   bottom: 0;

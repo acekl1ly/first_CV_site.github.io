@@ -413,7 +413,7 @@ header {
     }
 }
 
-header::before {
+header::after {
     content: '';
     position: absolute;
     bottom: 0;

@@ -872,6 +872,10 @@ header::before {
   color: #E5E5E5;
 }
 
+.contact-me {
+  overflow: hidden;
+}
+
 .contact-me .contact-form {
   -webkit-box-orient: vertical;
   -webkit-box-direction: normal;

@@ -658,6 +658,7 @@ header::before {
 }
 
 .contact-me {
+    overflow: hidden;
     .contact-form {
         @extend %flex-space-between;
         flex-direction: column;

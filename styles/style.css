@@ -741,7 +741,7 @@ header::before {
 }
 
 .about-me {
-  margin-top: 10vh;
+  padding-top: 10vh;
 }
 
 .about-me__text, .about-me__text2 {

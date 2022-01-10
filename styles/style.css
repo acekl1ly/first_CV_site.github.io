@@ -549,7 +549,7 @@ header::before {
   height: 10rem;
   background: -webkit-gradient(linear, left bottom, left top, from(#161240), to(transparent));
   background: linear-gradient(to top, #161240, transparent);
-  z-index: 99;
+  z-index: 100;
 }
 
 .back-to {

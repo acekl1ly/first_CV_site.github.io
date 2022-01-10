@@ -1320,7 +1320,7 @@ header section #explore {
 /* Medium devices (landscape tablets, 768px and up) */
 @media only screen and (max-width: 768px) {
   header {
-    height: 90vh;
+    height: 92vh;
   }
   header .header .logo-container {
     height: 100%;

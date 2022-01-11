@@ -30,15 +30,6 @@
             document.getElementById("loader").style.display = "none";
             document.getElementById("theSite").style.display = "block";
         }
-
-        
-
-        function setHeight() {
-        if ( screen.availWidth < 769) {
-            let header = document.getElementById("landing-header");
-            header.setAttribute("style", (screen.availHeight + 'px !important'));
-        }
-        }
         // scroll to top at refresh
         history.scrollRestoration = "manual";
             document.onbeforeunload = function () {
@@ -47,7 +38,7 @@
 
     </script>
 </head>
-<body onload="showPage(); setHeight()">
+<body onload="showPage();">
     <!-- Loader -->
     <div id="loader">
         <div class="content">

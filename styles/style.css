@@ -395,9 +395,7 @@ header .header, header .header .nav, .back-to div a, .about-me, .skills, .contac
 header {
   background: -webkit-gradient(linear, left top, left bottom, from(#2b1055), to(#7597de));
   background: linear-gradient(#2b1055, #7597de);
-  min-height: 80vh;
-  height: 100%;
-  max-height: 100vh;
+  height: 100vmax;
   width: 100%;
   overflow: hidden;
 }
@@ -480,7 +478,7 @@ header .header .nav a:hover, header .header .nav a.active {
 header section {
   position: relative;
   width: 100%;
-  height: 100vh;
+  height: 100vmax;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;

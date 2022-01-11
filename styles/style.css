@@ -1377,6 +1377,9 @@ header section #explore {
   header section #AbdurasulDjurayev {
     font-size: 5rem;
   }
+  #transparent-bottom {
+    height: 5rem;
+  }
   .skills {
     padding: auto;
   }

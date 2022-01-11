@@ -19,8 +19,6 @@ body {
   font-family: "Open Sans", sans-serif;
   color: #E5E5E5;
   overflow-x: hidden;
-  min-height: 100vh;
-  min-height: -webkit-fill-available;
 }
 
 a {
@@ -402,6 +400,7 @@ header {
   background: -webkit-gradient(linear, left top, left bottom, from(#2b1055), to(#7597de));
   background: linear-gradient(#2b1055, #7597de);
   height: 100vh;
+  height: -webkit-fill-available;
   width: 100%;
   overflow: hidden;
 }

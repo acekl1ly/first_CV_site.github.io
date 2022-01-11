@@ -286,7 +286,7 @@ ul {
 
 header {
     background: linear-gradient($gradient1, $gradient2);
-    height: 100vh;
+    // height: 100vh;
     height: calc(var(--vh, 1vh) * 100);
     width: 100%;
     overflow: hidden;

@@ -31,6 +31,14 @@
             document.getElementById("theSite").style.display = "block";
         }
 
+        
+
+        function setHeight() {
+        if ( screen.availWidth < 769) {
+            let header = document.getElementById("landing-header");
+            header.setAttribute("style", (screen.availHeight + 'px !important'));
+        }
+        }
         // scroll to top at refresh
         history.scrollRestoration = "manual";
             document.onbeforeunload = function () {
@@ -39,7 +47,7 @@
 
     </script>
 </head>
-<body onload="showPage()">
+<body onload="showPage(); setHeight()">
     <!-- Loader -->
     <div id="loader">
         <div class="content">
@@ -62,9 +70,8 @@
     </div>
 <div id="theSite">
     <div id="menu" class="menu"></div>
-    <header>
+    <header id="landing-header">
         <!-- Navbar -->
-        
         <div class="header">
             <div class="logo-container">
                 <a href="#" id="logo"><img src="./img/logo/logo3.svg" alt="logo"></a>
